@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maravillas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+          <h1>Maravillas</h1>
+        </div>
+      </div>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Country</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                              <tr (click)="onSelected(maravilla)" *ngFor="let maravilla of Maravillas">
+
+                                <td>{{ maravilla.id }}</td>
+                                <td>{{ maravilla.name }}</td>
+                                <td>{{ maravilla.country }}</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
