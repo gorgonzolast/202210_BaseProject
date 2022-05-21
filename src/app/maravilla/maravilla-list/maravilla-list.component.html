@@ -10,39 +10,35 @@
 </head>
 
 <body>
+  <div class="row"></div>
+  <div class="col">
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody >
+                  <tr (click)="onSelected(maravilla)" *ngFor="let maravilla of Maravillas">
 
-    <div class="container">
-        <div>
-          <h1>Maravillas</h1>
-        </div>
+                    <td>{{ maravilla.id }}</td>
+                    <td>{{ maravilla.name }}</td>
+                    <td>{{ maravilla.country }}</td>
+                  </tr>
+                </tbody>
+            </table>
+         </div>
       </div>
 
-    <div class="container">
-        <div class="row mt-3">
-            <div class="col-sm">
-                <div class="card">
-                    <div class="card-body">
 
-                        <table class="table">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Country</th>
-                                </tr>
-                            </thead>
-                            <tbody >
-                              <tr (click)="onSelected(maravilla)" *ngFor="let maravilla of Maravillas">
 
-                                <td>{{ maravilla.id }}</td>
-                                <td>{{ maravilla.name }}</td>
-                                <td>{{ maravilla.country }}</td>
-                              </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<div class="col-sm-4">
+  <div *ngIf="activate">
+    <app-maravilla-detail [selectedMaravilla]="selectedMaravilla" ></app-maravilla-detail>
+  </div>
+</div>
+</div>

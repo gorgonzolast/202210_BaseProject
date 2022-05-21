@@ -24,6 +24,12 @@ export class MaravillaListComponent implements OnInit {
   }
 
   funcion(maravillas: maravilla[]) {
+    maravillas.sort((a, b) => (a.country > b.country) ? 1 : -1)
+    var index: number = 1;
+    for (var val of maravillas) {
+      val.id = index;
+      index++;
+    }
     this.Maravillas = maravillas;
   }
 
